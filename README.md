@@ -3,4 +3,4 @@
 ### Codeclimat badge:
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 ### GitHub Action badge:
-![example workflow](https://github.com/Idzanaagi/git@github.com:Idzanaagi/frontend-project-lvl1.git/actions/workflows/github-actions-demo/badge.svg)
+[![example workflow](https://github.com/Idzanaagi/frontend-project-lvl1/workflows/github-actions-demo/badge.svg)](https://github.com/Idzanaagi/frontend-project-lvl1/actions)
