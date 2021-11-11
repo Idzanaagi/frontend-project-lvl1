@@ -2,4 +2,4 @@
 
 import gameEven from '../src/brain-even.js';
 
-gameEven();
+console.log(gameEven());
