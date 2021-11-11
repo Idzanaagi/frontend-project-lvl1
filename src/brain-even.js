@@ -11,6 +11,11 @@ function gameEven() {
     const number = getRandomNumber();
     console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('You answer: ');
+
+    if (userAnswer !== 'yes' && userAnswer !== 'no') {
+      return (`${userAnswer} is incorrect value.\nLet's try again, ${userName}! `);
+    }
+
     if (number % 2 === 0 && userAnswer === 'yes') {
       console.log('Correct!');
     }
@@ -24,7 +29,7 @@ function gameEven() {
       return (`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
     }
   }
-  return ('Congratulation!');
+  return (`Congratulation, ${userName}!`);
 }
 console.log(gameEven());
 
