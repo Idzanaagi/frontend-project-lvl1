@@ -5,13 +5,16 @@ function gameEven() {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const getRandomNumber = () => Math.floor(Math.random() * 100);
+  const getRandomNumber = () => Math.floor(Math.random() * 10);
 
-  for (let i = 1; i <= 3; i += i) {
+  for (let i = 1; i <= 3; i += 1) {
     const number = getRandomNumber();
     console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('You answer: ');
-    if (number % 2 === 0 && userAnswer === 'yes' || number % 2 !== 0 && userAnswer === 'no') {
+    if (number % 2 === 0 && userAnswer === 'yes') {
+      console.log('Correct!');
+    }
+    if (number % 2 !== 0 && userAnswer === 'no') {
       console.log('Correct!');
     }
     if (number % 2 === 0 && userAnswer === 'no') {
@@ -21,6 +24,8 @@ function gameEven() {
       return (`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
     }
   }
-  console.log('Congratulation!');
+  return ('Congratulation!');
 }
 console.log(gameEven());
+
+export default gameEven;
