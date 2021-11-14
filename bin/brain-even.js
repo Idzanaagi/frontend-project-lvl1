@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gameEven from '../src/brain-even.js';
+import parityCheckGame from '../src/brain-even.js';
 
-console.log(gameEven());
+console.log(parityCheckGame());

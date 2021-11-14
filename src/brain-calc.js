@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-function calc() {
+function calculatorGame() {
   function getRandomNumber() {
     return Math.floor(Math.random() * 100);
   }
@@ -42,4 +42,4 @@ function calc() {
   return (`Congratulation, ${userName}!`);
 }
 
-export default calc;
+export default calculatorGame;
