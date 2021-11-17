@@ -8,3 +8,5 @@
 [![asciicast](https://asciinema.org/a/LVYakm8pSJlf9HraoYTJaRHGW.svg)](https://asciinema.org/a/LVYakm8pSJlf9HraoYTJaRHGW)
 ### Brain-game: calculate
 [![asciicast](https://asciinema.org/a/zXW0yZugEFppLfMlKwtp8zJhW.svg)](https://asciinema.org/a/zXW0yZugEFppLfMlKwtp8zJhW)
+### Brain-game: gcd
+[![asciicast](https://asciinema.org/a/aJPlErevLGnuvQkr2pToNY46x.svg)](https://asciinema.org/a/aJPlErevLGnuvQkr2pToNY46x)
