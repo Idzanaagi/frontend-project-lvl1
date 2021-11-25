@@ -21,6 +21,9 @@ const brainPrime = () => {
     const b = getRandomNumber();
     console.log(`Question: ${b}`);
     const userAnswer = readlineSync.question('You answer: ');
+    if (userAnswer !== 'yes' && userAnswer !== 'no') {
+      return (`'${userAnswer}' is incorrect value.\nLet's try again, ${userName}! `);
+    }
     if (isPrime(b) === true && userAnswer === 'no') {
       return (`${userAnswer} is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}`);
     }

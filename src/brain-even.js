@@ -13,7 +13,7 @@ const parityCheckGame = () => {
     const userAnswer = readlineSync.question('You answer: ');
 
     if (userAnswer !== 'yes' && userAnswer !== 'no') {
-      return (`${userAnswer} is incorrect value.\nLet's try again, ${userName}! `);
+      return (`'${userAnswer}' is incorrect value.\nLet's try again, ${userName}! `);
     }
 
     if (number % 2 === 0 && userAnswer === 'yes') {

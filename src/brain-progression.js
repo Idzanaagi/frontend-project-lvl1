@@ -30,7 +30,7 @@ function brainProgression() {
     if (Number(userAnswer) === lett) {
       console.log('Correct!');
     } else {
-      return (`${userAnswer} is wrong answer ;(. Correct answer was ${lett}.\nLet's try again, ${userName}`);
+      return (`'${userAnswer}' is wrong answer ;(. Correct answer was ${lett}.\nLet's try again, ${userName}`);
     }
   }
   return (`Congratulation, ${userName}!`);
