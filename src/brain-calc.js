@@ -1,45 +1,34 @@
-import readlineSync from 'readline-sync';
+import generateRandomNum from './generaterandomnum.js';
+import getEngine from './index.js';
 
-function calculatorGame() {
-  function getRandomNumber() {
-    return Math.floor(Math.random() * 100);
-  }
-  let calculationResult;
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  console.log('What is the result of the expression?');
+const rules = 'What is the result of the expression?';
 
-  for (let i = 1; i <= 3; i += 1) {
-    const firstRandomNumber = getRandomNumber();
-    const secondRandomNumber = getRandomNumber();
+const calculatorGame = (roundCount) => {
+  const questionAndCorrectAnswer = [];
+  let correctAnswer;
+
+  for (let i = 0; i < roundCount; i += 1) {
+    const firstRandomNum = generateRandomNum();
+    const secondRandomNum = generateRandomNum();
 
     const arrOperator = ['+', '-', '*'];
     const random = Math.floor(Math.random() * arrOperator.length);
     const randomOperator = (arrOperator[random]);
 
-    console.log(`Question: ${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`);
-
-    const userAnswer = readlineSync.question('You answer: ');
-
     if (randomOperator === '+') {
-      calculationResult = firstRandomNumber + secondRandomNumber;
+      correctAnswer = firstRandomNum + secondRandomNum;
     }
     if (randomOperator === '-') {
-      calculationResult = firstRandomNumber - secondRandomNumber;
+      correctAnswer = firstRandomNum - secondRandomNum;
     }
     if (randomOperator === '*') {
-      calculationResult = firstRandomNumber * secondRandomNumber;
+      correctAnswer = firstRandomNum * secondRandomNum;
     }
 
-    if (Number(userAnswer) !== calculationResult) {
-      return (`${userAnswer} is wrong answer ;(. Correct answer was ${calculationResult}.\nLet's try again, ${userName}`);
-    }
-    if (Number(userAnswer) === calculationResult) {
-      console.log('Correct!');
-    }
+    const question = (`${firstRandomNum} ${randomOperator} ${secondRandomNum}`);
+    questionAndCorrectAnswer.push([question, correctAnswer.toString()]);
+    console.log(questionAndCorrectAnswer);
   }
-  return (`Congratulation, ${userName}!`);
-}
-
-export default calculatorGame;
+  return questionAndCorrectAnswer;
+};
+console.log(getEngine(rules, calculatorGame(3)));
