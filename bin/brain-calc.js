@@ -1,5 +1,5 @@
 #!/usr/bin/env node
+import getEngine from '../src/index.js';
+import { rules, calculatorGame } from '../src/brain-calc.js';
 
-import calculatorGame from '../src/brain-calc.js';
-
-console.log(calculatorGame());
+console.log(getEngine(rules, calculatorGame(3)));

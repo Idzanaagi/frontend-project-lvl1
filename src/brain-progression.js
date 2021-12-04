@@ -1,4 +1,3 @@
-import getEngine from './index.js';
 import generateRandomNum from './generaterandomnum.js';
 
 const getProgression = () => {
@@ -28,4 +27,4 @@ const progressionGame = (roundCount) => {
   return questionAndCorrectAnswer;
 };
 
-console.log(getEngine(rules, progressionGame(3)));
+export { rules, progressionGame };

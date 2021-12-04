@@ -1,5 +1,4 @@
 import generateRandomNum from './generaterandomnum.js';
-import getEngine from './index.js';
 
 const rules = 'What is the result of the expression?';
 
@@ -31,4 +30,4 @@ const calculatorGame = (roundCount) => {
   return questionAndCorrectAnswer;
 };
 
-console.log(getEngine(rules, calculatorGame(3)));
+export { rules, calculatorGame };

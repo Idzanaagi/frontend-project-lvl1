@@ -1,5 +1,4 @@
 import generateRandomNum from './generaterandomnum.js';
-import getEngine from './index.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -21,11 +20,10 @@ const primeGame = (roundCount) => {
 
   for (let i = 0; i < roundCount; i += 1) {
     const randomNum = generateRandomNum(1, 100);
-    console.log(randomNum);
     const correctAnswer = isPrime(randomNum) === true ? 'yes' : 'no';
     questionAndCorrectAnswer.push([randomNum, correctAnswer]);
   }
   return questionAndCorrectAnswer;
 };
 
-console.log(getEngine(rules, primeGame(3)));
+export { rules, primeGame };

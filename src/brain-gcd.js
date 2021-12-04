@@ -1,5 +1,4 @@
 import generateRandomNum from './generaterandomnum.js';
-import getEngine from './index.js';
 
 const getGcd = (a, b) => {
   if (b === 0) {
@@ -22,4 +21,5 @@ const gcdGame = (roundCount) => {
   }
   return questionAndCorrectAnswer;
 };
-console.log(getEngine(rules, gcdGame(3)));
+
+export { rules, gcdGame };
