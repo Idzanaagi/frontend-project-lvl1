@@ -1,11 +1,13 @@
 import readlineSync from 'readline-sync';
 
-function getEngine(right, correctAnswer) {
+function getEngine(rules, correctAnswer) {
   const roundCount = 3;
+
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(right);
+  console.log(rules);
+
   for (let i = 0; i < roundCount; i += 1) {
     console.log(`Question ${correctAnswer[i][0]}`);
     const userAnswer = readlineSync.question('You answer: ');
@@ -19,4 +21,3 @@ function getEngine(right, correctAnswer) {
   return (`Congratulation, ${userName}!`);
 }
 export default getEngine;
-

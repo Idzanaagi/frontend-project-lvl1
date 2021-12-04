@@ -14,13 +14,12 @@ const gcdGame = (roundCount) => {
   const questionAndCorrectAnswer = [];
 
   for (let i = 0; i < roundCount; i += 1) {
-    const firstRandomNum = generateRandomNum();
-    const secondRandomNum = generateRandomNum();
+    const firstRandomNum = generateRandomNum(1, 100);
+    const secondRandomNum = generateRandomNum(1, 100);
     const question = (`${firstRandomNum} ${secondRandomNum}`);
     const correctAnswer = getGcd(firstRandomNum, secondRandomNum);
     questionAndCorrectAnswer.push([question, correctAnswer.toString()]);
   }
-  console.log(questionAndCorrectAnswer);
   return questionAndCorrectAnswer;
 };
 console.log(getEngine(rules, gcdGame(3)));

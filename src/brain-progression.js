@@ -1,22 +1,25 @@
 import getEngine from './index.js';
 import generateRandomNum from './generaterandomnum.js';
 
-const getProgression = (start = generateRandomNum(), step = generateRandomNum(), length = 7) => {
+const getProgression = () => {
+  const startProgression = generateRandomNum(1, 100);
+  const stepProgression = generateRandomNum(1, 10);
+  const lengthProgression = 7;
   const progression = [];
-  for (let i = 0; i < length; i += 1) {
-    progression.push(start + step * i);
+  for (let i = 0; i < lengthProgression; i += 1) {
+    progression.push(startProgression + stepProgression * i);
   }
   return progression;
 };
 
 const rules = 'What number is missing in the progression?';
 
-const brainProgression = (roundCount) => {
+const progressionGame = (roundCount) => {
   const questionAndCorrectAnswer = [];
 
   for (let i = 0; i < roundCount; i += 1) {
     const progression = getProgression();
-    const randomIndex = generateRandomNum();
+    const randomIndex = generateRandomNum(1, 6);
     const correctAnswer = progression[randomIndex];
     progression[randomIndex] = '..';
     const question = progression.join(' ');
@@ -25,4 +28,4 @@ const brainProgression = (roundCount) => {
   return questionAndCorrectAnswer;
 };
 
-console.log(getEngine(rules, brainProgression(3)));
+console.log(getEngine(rules, progressionGame(3)));

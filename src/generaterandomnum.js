@@ -1,4 +1,4 @@
-function generateRandomNum() {
-  return Math.floor(Math.random() * (10 - 1) + 10);
+function generateRandomNum(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
 export default generateRandomNum;

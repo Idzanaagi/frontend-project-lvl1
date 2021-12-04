@@ -8,8 +8,8 @@ const calculatorGame = (roundCount) => {
   let correctAnswer;
 
   for (let i = 0; i < roundCount; i += 1) {
-    const firstRandomNum = generateRandomNum();
-    const secondRandomNum = generateRandomNum();
+    const firstRandomNum = generateRandomNum(1, 100);
+    const secondRandomNum = generateRandomNum(1, 100);
 
     const arrOperator = ['+', '-', '*'];
     const random = Math.floor(Math.random() * arrOperator.length);
@@ -27,8 +27,8 @@ const calculatorGame = (roundCount) => {
 
     const question = (`${firstRandomNum} ${randomOperator} ${secondRandomNum}`);
     questionAndCorrectAnswer.push([question, correctAnswer.toString()]);
-    console.log(questionAndCorrectAnswer);
   }
   return questionAndCorrectAnswer;
 };
+
 console.log(getEngine(rules, calculatorGame(3)));
