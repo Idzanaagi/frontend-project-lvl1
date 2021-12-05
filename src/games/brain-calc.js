@@ -1,4 +1,4 @@
-import generateRandomNum from './generaterandomnum.js';
+import generateRandomNum from '../generaterandomnum.js';
 
 const rules = 'What is the result of the expression?';
 

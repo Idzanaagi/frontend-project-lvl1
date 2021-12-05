@@ -1,4 +1,4 @@
-import generateRandomNum from './generaterandomnum.js';
+import generateRandomNum from '../generaterandomnum.js';
 
 const getGcd = (a, b) => {
   if (b === 0) {

@@ -1,4 +1,4 @@
-import generateRandomNum from './generaterandomnum.js';
+import generateRandomNum from '../generaterandomnum.js';
 
 const rules = 'Answer "yes" if number is even. Or answer "no"';
 

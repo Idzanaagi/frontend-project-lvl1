@@ -1,4 +1,4 @@
-import generateRandomNum from './generaterandomnum.js';
+import generateRandomNum from '../generaterandomnum.js';
 
 const isPrime = (number) => {
   if (number < 2) {

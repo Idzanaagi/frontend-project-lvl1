@@ -1,4 +1,4 @@
-import generateRandomNum from './generaterandomnum.js';
+import generateRandomNum from '../generaterandomnum.js';
 
 const getProgression = () => {
   const startProgression = generateRandomNum(1, 100);
