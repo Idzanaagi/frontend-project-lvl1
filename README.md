@@ -4,9 +4,13 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 ### Linter:
 [![Linter](https://github.com/Idzanaagi/frontend-project-lvl1/workflows/linter/badge.svg)](https://github.com/Idzanaagi/frontend-project-lvl1/actions)
-### Brain-game: isEven
-[![asciicast](https://asciinema.org/a/LVYakm8pSJlf9HraoYTJaRHGW.svg)](https://asciinema.org/a/LVYakm8pSJlf9HraoYTJaRHGW)
-### Brain-game: calculate
-[![asciicast](https://asciinema.org/a/zXW0yZugEFppLfMlKwtp8zJhW.svg)](https://asciinema.org/a/zXW0yZugEFppLfMlKwtp8zJhW)
-### Brain-game: gcd
-[![asciicast](https://asciinema.org/a/aJPlErevLGnuvQkr2pToNY46x.svg)](https://asciinema.org/a/aJPlErevLGnuvQkr2pToNY46x)
+### isEvenGame:
+[![asciicast](https://asciinema.org/a/riKy7IApXuxBTfNZR166fyVw0.svg)](https://asciinema.org/a/riKy7IApXuxBTfNZR166fyVw0)
+### calculatorGame:
+[![asciicast](https://asciinema.org/a/y1qPKLkiZlDbJwu6LozwztavU.svg)](https://asciinema.org/a/y1qPKLkiZlDbJwu6LozwztavU)
+### gcdGame:
+[![asciicast](https://asciinema.org/a/68CnfEq0xfPiapQ6kCgNBNlms.svg)](https://asciinema.org/a/68CnfEq0xfPiapQ6kCgNBNlms)
+### progressionGame:
+[![asciicast](https://asciinema.org/a/NyHb5pYBV4HBrxtTdtII3TIuh.svg)](https://asciinema.org/a/NyHb5pYBV4HBrxtTdtII3TIuh)
+### isPrimeGame:
+[![asciicast](https://asciinema.org/a/lXc294cmoLJz384alOZM1TPho.svg)](https://asciinema.org/a/lXc294cmoLJz384alOZM1TPho)
