@@ -9,7 +9,7 @@ function getEngine(rules, correctAnswer) {
   console.log(rules);
 
   for (let i = 0; i < roundCount; i += 1) {
-    console.log(`Question ${correctAnswer[i][0]}`);
+    console.log(`Question: ${correctAnswer[i][0]}`);
     const userAnswer = readlineSync.question('You answer: ');
     if (userAnswer === correctAnswer[i][1]) {
       console.log('Correct!');
