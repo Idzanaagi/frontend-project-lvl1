@@ -15,7 +15,7 @@ function getEngine(rules, correctAnswer) {
       console.log('Correct!');
     }
     if (userAnswer !== correctAnswer[i][1]) {
-      return (`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer[i][1]}'.\nLet's try again, ${userName}`);
+      return (`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer[i][1]}'.\nLet's try again, ${userName}!`);
     }
   }
   return (`Congratulations, ${userName}!`);
