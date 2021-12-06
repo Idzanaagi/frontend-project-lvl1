@@ -18,6 +18,6 @@ function getEngine(rules, correctAnswer) {
       return (`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer[i][1]}'.\nLet's try again, ${userName}`);
     }
   }
-  return (`Congratulation, ${userName}!`);
+  return (`Congratulations, ${userName}!`);
 }
 export default getEngine;
