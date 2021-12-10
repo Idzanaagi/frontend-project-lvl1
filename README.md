@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Idzanaagi/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Idzanaagi/frontend-project-lvl1/actions)
 ### Codeclimat badge:
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://github.com/Idzanaagi/frontend-project-lvl1/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/67c6a20d1cf3563424cc/maintainability)](https://codeclimate.com/github/Idzanaagi/frontend-project-lvl1/maintainability)
 ### Linter:
 [![Linter](https://github.com/Idzanaagi/frontend-project-lvl1/workflows/linter/badge.svg)](https://github.com/Idzanaagi/frontend-project-lvl1/actions)
 ### isEvenGame:

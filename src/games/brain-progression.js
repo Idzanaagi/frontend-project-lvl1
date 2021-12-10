@@ -19,10 +19,10 @@ const progressionGame = (roundCount) => {
   for (let i = 0; i < roundCount; i += 1) {
     const progression = getProgression();
     const randomIndex = generateRandomNum(1, 6);
-    const correctAnswer = progression[randomIndex];
+    const gameData = progression[randomIndex];
     progression[randomIndex] = '..';
     const question = progression.join(' ');
-    questionAndCorrectAnswer.push([question, String(correctAnswer)]);
+    questionAndCorrectAnswer.push([question, String(gameData)]);
   }
   return questionAndCorrectAnswer;
 };

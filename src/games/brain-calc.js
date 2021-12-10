@@ -4,7 +4,7 @@ const rules = 'What is the result of the expression?';
 
 const calculatorGame = (roundCount) => {
   const questionAndCorrectAnswer = [];
-  let correctAnswer;
+  let gameData;
 
   for (let i = 0; i < roundCount; i += 1) {
     const firstRandomNum = generateRandomNum(1, 100);
@@ -15,17 +15,17 @@ const calculatorGame = (roundCount) => {
     const randomOperator = (arrOperator[random]);
 
     if (randomOperator === '+') {
-      correctAnswer = firstRandomNum + secondRandomNum;
+      gameData = firstRandomNum + secondRandomNum;
     }
     if (randomOperator === '-') {
-      correctAnswer = firstRandomNum - secondRandomNum;
+      gameData = firstRandomNum - secondRandomNum;
     }
     if (randomOperator === '*') {
-      correctAnswer = firstRandomNum * secondRandomNum;
+      gameData = firstRandomNum * secondRandomNum;
     }
 
     const question = (`${firstRandomNum} ${randomOperator} ${secondRandomNum}`);
-    questionAndCorrectAnswer.push([question, correctAnswer.toString()]);
+    questionAndCorrectAnswer.push([question, gameData.toString()]);
   }
   return questionAndCorrectAnswer;
 };

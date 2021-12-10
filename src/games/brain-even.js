@@ -7,8 +7,8 @@ const isEvenGame = (roundCount) => {
 
   for (let i = 0; i < roundCount; i += 1) {
     const randomNum = generateRandomNum(1, 100);
-    const correctAnswer = randomNum % 2 === 0 ? 'yes' : 'no';
-    questionAndCorrectAnswer.push([randomNum, correctAnswer]);
+    const gameData = randomNum % 2 === 0 ? 'yes' : 'no';
+    questionAndCorrectAnswer.push([randomNum, gameData]);
   }
   return questionAndCorrectAnswer;
 };

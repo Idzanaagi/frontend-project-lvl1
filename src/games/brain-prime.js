@@ -20,8 +20,8 @@ const primeGame = (roundCount) => {
 
   for (let i = 0; i < roundCount; i += 1) {
     const randomNum = generateRandomNum(1, 100);
-    const correctAnswer = isPrime(randomNum) === true ? 'yes' : 'no';
-    questionAndCorrectAnswer.push([randomNum, correctAnswer]);
+    const gameData = isPrime(randomNum) === true ? 'yes' : 'no';
+    questionAndCorrectAnswer.push([randomNum, gameData]);
   }
   return questionAndCorrectAnswer;
 };

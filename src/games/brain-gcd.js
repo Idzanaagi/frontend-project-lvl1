@@ -16,8 +16,8 @@ const gcdGame = (roundCount) => {
     const firstRandomNum = generateRandomNum(1, 100);
     const secondRandomNum = generateRandomNum(1, 100);
     const question = (`${firstRandomNum} ${secondRandomNum}`);
-    const correctAnswer = getGcd(firstRandomNum, secondRandomNum);
-    questionAndCorrectAnswer.push([question, correctAnswer.toString()]);
+    const gameData = getGcd(firstRandomNum, secondRandomNum);
+    questionAndCorrectAnswer.push([question, gameData.toString()]);
   }
   return questionAndCorrectAnswer;
 };
