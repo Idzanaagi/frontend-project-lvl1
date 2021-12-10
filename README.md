@@ -5,7 +5,7 @@
 ### Linter:
 [![Linter](https://github.com/Idzanaagi/frontend-project-lvl1/workflows/linter/badge.svg)](https://github.com/Idzanaagi/frontend-project-lvl1/actions)
 
-«Игры разума» – 5 математических игр.
+<h3> «Игры разума» – 5 математических игр </h3>
 
 --------------------------
 Установка:
