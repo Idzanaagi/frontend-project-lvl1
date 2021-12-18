@@ -1,8 +1,9 @@
 import generateRandomNum from '../generaterandomnum.js';
+import { roundCount } from '../index.js';
 
 const rules = 'What is the result of the expression?';
 
-const calculatorGame = (roundCount) => {
+const calculatorGame = () => {
   const questionAndCorrectAnswer = [];
   let gameData;
 

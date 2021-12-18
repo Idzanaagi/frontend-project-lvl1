@@ -1,4 +1,5 @@
 import generateRandomNum from '../generaterandomnum.js';
+import { roundCount } from '../index.js';
 
 const getGcd = (a, b) => {
   if (b === 0) {
@@ -9,7 +10,7 @@ const getGcd = (a, b) => {
 
 const rules = 'Find the greatest common divisor of given numbers.';
 
-const gcdGame = (roundCount) => {
+const gcdGame = () => {
   const questionAndCorrectAnswer = [];
 
   for (let i = 0; i < roundCount; i += 1) {

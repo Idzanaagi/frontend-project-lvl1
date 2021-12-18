@@ -1,4 +1,5 @@
 import generateRandomNum from '../generaterandomnum.js';
+import { roundCount } from '../index.js';
 
 const getProgression = () => {
   const startProgression = generateRandomNum(1, 100);
@@ -13,7 +14,7 @@ const getProgression = () => {
 
 const rules = 'What number is missing in the progression?';
 
-const progressionGame = (roundCount) => {
+const progressionGame = () => {
   const questionAndCorrectAnswer = [];
 
   for (let i = 0; i < roundCount; i += 1) {

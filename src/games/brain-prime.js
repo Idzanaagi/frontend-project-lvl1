@@ -1,4 +1,5 @@
 import generateRandomNum from '../generaterandomnum.js';
+import { roundCount } from '../index.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -15,7 +16,7 @@ const isPrime = (number) => {
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const primeGame = (roundCount) => {
+const primeGame = () => {
   const questionAndCorrectAnswer = [];
 
   for (let i = 0; i < roundCount; i += 1) {

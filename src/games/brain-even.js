@@ -1,8 +1,9 @@
 import generateRandomNum from '../generaterandomnum.js';
+import { roundCount } from '../index.js';
 
 const rules = 'Answer "yes" if number is even. Or answer "no"';
 
-const isEvenGame = (roundCount) => {
+const isEvenGame = () => {
   const questionAndCorrectAnswer = [];
 
   for (let i = 0; i < roundCount; i += 1) {
