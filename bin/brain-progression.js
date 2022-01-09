@@ -2,4 +2,4 @@
 import getEngine from '../src/index.js';
 import { rules, progressionGame } from '../src/games/brain-progression.js';
 
-console.log(getEngine(rules, progressionGame(3)));
+getEngine(rules, progressionGame());
