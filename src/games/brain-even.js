@@ -1,17 +1,24 @@
 import generateRandomNum from '../generaterandomnum.js';
-import { roundCount } from '../index.js';
+import { roundsCount } from '../index.js';
+
+const isEven = (number) => (number % 2 === 0);
+const checkParity = (number) => (isEven(number) ? 'yes' : 'no');
 
 const rules = 'Answer "yes" if number is even. Or answer "no"';
 
-const isEvenGame = () => {
-  const questionAndCorrectAnswer = [];
-
-  for (let i = 0; i < roundCount; i += 1) {
-    const randomNum = generateRandomNum(1, 100);
-    const gameData = randomNum % 2 === 0 ? 'yes' : 'no';
-    questionAndCorrectAnswer.push([randomNum, gameData]);
-  }
-  return questionAndCorrectAnswer;
+const generateOneRound = () => {
+  const randomNum = generateRandomNum(1, 100);
+  const question = (`${randomNum}`);
+  const answer = checkParity(randomNum);
+  return [question, answer];
 };
 
-export { rules, isEvenGame };
+const evenGame = () => {
+  const gameData = [];
+  for (let i = 0; i < roundsCount; i += 1) {
+    gameData.push(generateOneRound());
+  }
+  return gameData;
+};
+
+export { rules, evenGame };
