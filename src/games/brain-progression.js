@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import generateRandomNum from '../generaterandomnum.js';
 import { roundsCount } from '../index.js';
 
@@ -15,23 +14,27 @@ const getProgression = () => {
 
 const rules = 'What number is missing in the progression?';
 
-const randomIndex = generateRandomNum(1, 6);
-
-const addingHiddenSymbol = (arrOfProgression = getProgression(), index = randomIndex) => {
-  const gameData = arrOfProgression[index];
+const addingHiddenSymbol = (arrOfProgression, index) => {
+  // eslint-disable-next-line no-param-reassign
   arrOfProgression[index] = '..';
   const question = arrOfProgression.join(' ');
-  return [question, gameData];
+  return question;
+};
+
+const generateOneRound = () => {
+  const index = generateRandomNum(1, 6);
+  const progression = getProgression();
+  const answer = progression[index];
+  const question = addingHiddenSymbol(progression, index);
+  return [question, answer.toString()];
 };
 
 const progressionGame = () => {
-  const questionAndCorrectAnswer = [];
-
+  const gameData = [];
   for (let i = 0; i < roundsCount; i += 1) {
-    const question = addingHiddenSymbol();
-    questionAndCorrectAnswer.push([question[0], String(question[1])]);
+    gameData.push(generateOneRound());
   }
-  return questionAndCorrectAnswer;
+  return gameData;
 };
 
 export { rules, progressionGame };
