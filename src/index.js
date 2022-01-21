@@ -3,11 +3,11 @@ import readlineSync from 'readline-sync';
 
 export const roundsCount = 3;
 
-const getEngine = (rules, gameData) => {
+export const getEngine = (gameRules, gameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(rules);
+  console.log(gameRules);
 
   for (const roundData of gameData) {
     const [question, answer] = roundData;
@@ -22,5 +22,3 @@ const getEngine = (rules, gameData) => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
-
-export default getEngine;

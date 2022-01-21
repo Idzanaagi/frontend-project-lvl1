@@ -1,26 +1,27 @@
 import generateRandomNum from '../generaterandomnum.js';
-import { roundsCount } from '../index.js';
+import { getEngine, roundsCount } from '../index.js';
 
 const isPrime = (number) => {
   if (number < 2) {
     return false;
   }
 
-  for (let i = 2; i <= Math.sqrt(number); i += 1) {
+  const squareRoot = Math.sqrt(number);
+
+  for (let i = 2; i <= squareRoot; i += 1) {
     if (number % i === 0) {
       return false;
     }
   }
   return true;
 };
-const checkPrime = (number) => (isPrime(number) ? 'yes' : 'no');
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generateOneRound = () => {
   const randomNum = generateRandomNum(1, 100);
-  const question = (`${randomNum}`);
-  const answer = checkPrime(randomNum);
+  const question = String(randomNum);
+  const answer = isPrime(randomNum) ? 'yes' : 'no';
   return [question, answer];
 };
 
@@ -29,7 +30,7 @@ const primeGame = () => {
   for (let i = 0; i < roundsCount; i += 1) {
     gameData.push(generateOneRound());
   }
-  return gameData;
+  getEngine(gameRules, gameData);
 };
 
-export { rules, primeGame };
+export default primeGame;
