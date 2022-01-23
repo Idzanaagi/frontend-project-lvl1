@@ -1,17 +1,16 @@
 import generateRandomNum from '../generaterandomnum.js';
 import { getEngine, roundsCount } from '../index.js';
 
+const gameRules = 'What number is missing in the progression?';
 const progressionLength = 7;
 
-const getProgression = (start = generateRandomNum(1, 100), step = generateRandomNum(1, 10)) => {
+const getProgression = (start, step) => {
   const progression = [];
   for (let i = 0; i < progressionLength; i += 1) {
     progression.push(start + step * i);
   }
   return progression;
 };
-
-const gameRules = 'What number is missing in the progression?';
 
 const getHideSymbol = (arrOfProgression, index) => {
   const progressionCopy = arrOfProgression.slice();
@@ -22,10 +21,12 @@ const getHideSymbol = (arrOfProgression, index) => {
 
 const generateOneRound = () => {
   const index = generateRandomNum(0, progressionLength - 1);
-  const progression = getProgression();
+  const start = generateRandomNum(1, 100);
+  const step = generateRandomNum(1, 10);
+  const progression = getProgression(start, step);
   const answer = progression[index];
   const question = getHideSymbol(progression, index);
-  return [question, answer.toString()];
+  return [question, String(answer)];
 };
 
 const progressionGame = () => {

@@ -13,7 +13,7 @@ const logicsOfMath = (firstRandomNum, secondRandomNum, randomOperator) => {
     case '*':
       return firstRandomNum * secondRandomNum;
     default:
-      return 'something wrong with operators';
+      throw new Error(`operation ${randomOperator} is not supported`);
   }
 };
 

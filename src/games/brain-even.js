@@ -1,9 +1,9 @@
 import generateRandomNum from '../generaterandomnum.js';
 import { getEngine, roundsCount } from '../index.js';
 
-const isEven = (number) => (number % 2 === 0);
-
 const gameRules = 'Answer "yes" if number is even. Or answer "no"';
+
+const isEven = (number) => (number % 2 === 0);
 
 const generateOneRound = () => {
   const randomNum = generateRandomNum(1, 100);
