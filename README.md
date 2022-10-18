@@ -2,33 +2,38 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/67c6a20d1cf3563424cc/maintainability)](https://codeclimate.com/github/Idzanaagi/frontend-project-lvl1/maintainability)
 [![Linter](https://github.com/Idzanaagi/frontend-project-lvl1/workflows/linter/badge.svg)](https://github.com/Idzanaagi/frontend-project-lvl1/actions)
 
-<h3> «Игры разума» – 5 математических игр </h3>
+<h1> Игры разума </h1>
+<h2> Набор из 5 консольных математических игр </h2>
 
---------------------------
-Установка:
-- установить Node.js последней версии в систему глобально;
-- склонировать себе созданный репозиторий проекта; 
-- перейдя в папку установленного проект, набрать make install для установки зависимостей (возможно, понадобится также установить make);
-- установить игры с помощью команды npm link;
-- для начала игры наберите make название_игры. На выбор – brain-even, brain-calc, brain-gcd, brain-progression и brain-prime.
---------------------------
-Представлены 5 игр:
+<b> Стек: JavaScript, readline-sync, eslint </b>
 
-«Проверка на чётность». Вызывается командой brain-even. Пользователю нужно определить, является ли число чётным. 
+<b>Описание: </b>
+- создала логику 5 игр: ['Проверка на чётность'](https://github.com/Idzanaagi/frontend-project-lvl1/blob/main/src/games/brain-even.js), ['Калькулятор'](https://github.com/Idzanaagi/frontend-project-lvl1/blob/main/src/games/brain-calc.js), ['НОД'](https://github.com/Idzanaagi/frontend-project-lvl1/blob/main/src/games/brain-gcd.js), ['Пропущенное число'](https://github.com/Idzanaagi/frontend-project-lvl1/blob/main/src/games/brain-progression.js) и ['Простое число'](https://github.com/Idzanaagi/frontend-project-lvl1/blob/main/src/games/brain-prime.js);
+- добавила библиотеку *readline-sync* для взаимодействия с пользователем;
+- вывела общую для всех игр логику в [отдельный модуль](https://github.com/Idzanaagi/frontend-project-lvl1/blob/main/src/index.js);
+- подключила *eslint* (станадарт Airbnb) и переписала код c "того, что было", на то "как надо".
+------------
 
-«Калькулятор». Вызывается командой brain-calc. Здесь надо решить математический пример. 
+<b> Так, например, выглядит игра "Проверка на чётность": </b>
 
-«НОД». Вызывается командой brain-gcd. Для двух чисел нужно определить наибольший общий делитель.
-
-«Прогрессия». Вызывается командой brain-progression. В ряде чисел, образующих математическую прогрессию, пропущено число. Какое? Должен определить игрок. 
-
-«Простое число». Вызывается командой brain-prime. Игрок должен определить, является ли число простым.
-
---------------------------
-Демонстация игрового процесса:
-
-### isEvenGame:
 [![asciicast](https://asciinema.org/a/riKy7IApXuxBTfNZR166fyVw0.svg)](https://asciinema.org/a/riKy7IApXuxBTfNZR166fyVw0)
+
+<b>Установка: </b>
+- склонировать себе этот репозиторий; 
+- перейдя в папку установленного проекта, набрать в терминале make install для установки зависимостей;
+- затем набрать make название_игры. На выбор – brain-even, brain-calc, brain-gcd, brain-progression и brain-prime. Например, make brain-even. 
+
+------------
+
+<b>Описание игр и команды для их вызова: </b>
+- «Проверка на чётность». Пользователю нужно ответить, является ли число чётным. Команда – <b> make brain-even </b>;
+- «Калькулятор». Здесь надо решить математический пример. Доступны операции сложения, вычитания и умножения. Команда – <b> make brain-calc </b>;
+- «НОД». Для двух чисел нужно найти наибольший общий делитель. Команда – <b> make brain-gcd </b>;
+- «Прогрессия». В ряде чисел, образующих математическую прогрессию, пропущено число. Его и надо определить <b> Команда – make brain-progression </b>;
+- «Простое число». Игрок должен ответить, является ли число простым. Команда – <b> make brain-prime </b>.
+
+------------
+<b> Демо остальных игр:</b>
 ### calculatorGame:
 [![asciicast](https://asciinema.org/a/y1qPKLkiZlDbJwu6LozwztavU.svg)](https://asciinema.org/a/y1qPKLkiZlDbJwu6LozwztavU)
 ### gcdGame:
